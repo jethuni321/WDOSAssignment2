@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grocies Supermarket </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="apple-touch-icon" sizes="180x180" href="PWA_Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="PWA_Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="PWA_Icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="cssStyles/newCart.css">
+    
+    
+
+</head>
+<body>
+    <header class="head-color">
+        
+        
+        <div class="container-header">
+            
+                <div class="logo">
+                    <img class="grocies-img" src="Grocies_Supermarket_logo.png" alt="Grocies Supermarket Logo">
+                </div>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search your Product name/brand">
+                </div>
+                
+                <div class="buttons-header desktop-buttons">
+                    <button class="delivery-btn" onclick="window.location.href='OrderPage.html'">
+                        <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                    </button>
+                    <button class="store-btn" onclick="window.location.href='AboutUs.html'">
+                        <i class="fa-solid fa-location-dot"></i> Store Location
+                    </button>
+                    <button class="signup-btn" onclick="window.location.href='signup-login.html'">
+                        <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                    </button>
+                </div>
+                
+                <div class="buttons-header mobile-buttons">
+                    <button class="delivery-btn-mobile" onclick="window.location.href='OrderPage.html'">
+                        <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                    </button>
+                    <button class="store-btn-mobile" onclick="window.location.href='AboutUs.html'">
+                        <i class="fa-solid fa-location-dot"></i> Store Location
+                    </button>
+                    <button class="signup-btn-mobile" onclick="window.location.href='signup-login.html'">
+                        <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                    </button>
+                </div>
+            </div>
+    
+        
+
+    
+    
+        <nav class="nav-bar"> 
+
+                <ul> 
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbutton"> Products
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Vegetables.html"> Vegetables </a>
+                                <a href="DiaryProducts.html"> Diary Products</a>
+                                <a href="CosmeticsandSkinCare.html"> Cosmetic and Skin Care </a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li> <a href="home.html"> Home  </a> </li>
+
+                    <li> <a href="OrderPage.html"> Order Page  </a> </li>
+                    <li> <a href="LoyaltyRegistration.html"> Loyalty Registration </a> </li>
+                    <li> <a href="AboutUs.html"> About us </a> </li>
+                    <li> <a href="cartPage.html"> Cart <i class="fa-solid fa-cart-shopping"></i>  </a> </li> 
+                </ul>
+
+              
+
+        </nav>
+    
+   
+
+</header>
+    <main>
+        
+
+        <div class="products-section-bar">
+            <div class="product-section-item">
+                <a href="#fruits">
+                    <img src="Images/productSection/fruits.jpg" alt="Assorted fruits">
+                    <p>Fruits</p>
+                </a>
+            </div>
+            <div class="product-section-item">
+                <a href="#vegetables">
+                    <img src="Images/productSection/vegetables.jpg" alt="Various vegetables">
+                    <p>Vegetables</p>
+                </a>
+            </div>
+            <div class="product-section-item">
+                <a href="#diaryproducts">
+                    <img src="Images/productSection/diaryProducts.jpg" alt="Different dairy products">
+                    <p>Dairy Products</p>
+                </a>
+            </div>
+            <div class="product-section-item">
+                <a href="#meat&Seafood">
+                    <img src="Images/productSection/meat&Seafood.jpg" alt="Meat and seafood options">
+                    <p>Meat and Seafood</p>
+                </a>
+            </div>
+            <div class="product-section-item">
+                <a href="#baking&Cooking">
+                    <img src="Images/productSection/baking&Cooking.jpg" alt="Ingredients for baking and cooking">
+                    <p>Baking & Cooking Ingredients</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="cart-header">
+            
+                <h1 class="order-cart-title"> Grocery Cart </h1>
+                <i class="fa-solid fa-cart-shopping" id="cart-icon" ></i>
+
+
+            
+            <div class="cart-container">
+                    <h1 class="cart-title"> Your Grocery Cart </h1>
+                    <div class="cart-content">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Product Image</th>
+                                    <th>Product Name</th>
+                                    <th>Price per unit (Rs)</th>
+                                    <th>Quantity</th>
+                                    <th>Remove</th>
+                                    <th>Price (Rs)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-items">
+                                
+                            </tbody>
+                        </table>
+                </div>
+
+                    <!--Container for apply and add to favourites-->
+                        <div class="btn-fav-container">
+                            <button  class="apply-fav-btn"> 
+                               <i class="fa-solid fa-heart"></i> Apply favorites
+                               
+                            </button>
+                            <button  class="add-fav-btn">
+                                <i class="fa-solid fa-star"></i> Add to favorite
+                            </button>
+                        </div>
+                    
+                        
+                        <!-- Total price is calculated-->
+                        <div class="total">
+                            <div class="total-title"> Total</div>
+                            <div class="total-price">Rs 0.00 </div>
+                            
+                        </div>
+
+                        
+
+                        <div class="btn-buy-container">
+                            <button type="button" class="btn-buy" onclick="window.location.href='order.html';">Buy Now</button>
+                        </div>
+                            
+                            
+                
+                        
+                        <!--To close the cart-->
+                        <i class="fa-solid fa-xmark" id="close-cart"></i> 
+
+
+                
+
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2 class="product-head-title"> Fruits </h2>
+            <section class="products-grid" id="fruits">
+                
+                
+                <div class="product-item" >
+                    <img src="Images/Fruits/banana.jpeg" alt="" class="product-img">
+                    <h3 class="product-title"> Banana </h3>
+                    <p class="price-per-unit"> Rs 250/Kg </p>
+                    <div class="quantity-input">
+                        <label for="banana"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="banana" min="0" step="0.1" placeholder="0">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/avocado.jpeg" alt="" class="product-img">
+                    <h3 class="product-title"> Avocado </h3>
+                    <p class="price-per-unit"> Rs 400/Kg </p>
+                    <div class="quantity-input">
+                        <label for="avocado"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="avocado" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/pineapple.jpeg" alt="" class="product-img">
+                    <h3 class="product-title"> Pineapple </h3>
+                    <p class="price-per-unit"> Rs 600/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-pineapple">Quantity (kg):
+                            <input type="number" id="quantity-pineapple" class="quantity-value" name="quantity-pineapple" min="0" step="0.1" placeholder="0">
+                        </label>
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/grapes.jpeg" alt="" class="product-img">
+                    <h3 class="product-title"> Grapes </h3>
+                    <p class="price-per-unit"> Rs 800/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-grapes"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-grapes" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/orange.jpeg" alt="" class="product-img">
+                    <h3 class="product-title"> Orange </h3>
+                    <p class="price-per-unit"> Rs 1,000/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-orange"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-orange" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/watermelon.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Watermelon </h3>
+                    <p class="price-per-unit"> Rs 400/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-watermelon"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-watermelon" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/apple.jpeg" alt="" class="product-img">
+                    <h3 class="product-title"> Apple </h3>
+                    <p class="price-per-unit"> Rs 1,200/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-apple"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-apple" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/mango.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Mango </h3>
+                    <p class="price-per-unit"> Rs 700/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-mango"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-mango" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/strawberry.jpeg" alt="" class="product-img">
+                    <h3 class="product-title"> Strawberry </h3>
+                    <p class="price-per-unit"> Rs 2,000/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-strawberry"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-strawberry" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/cherry.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> cherry </h3>
+                    <p class="price-per-unit"> Rs 2,800/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-cherry"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-cherry" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/rasberry.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Raspberry </h3>
+                    <p class="price-per-unit"> Rs 3,000/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-raspberry"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-raspberry" min="0" step="0.1" placeholder="0">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/blueberry.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> blueberry </h3>
+                    <p class="price-per-unit"> Rs 3,500/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-blueberry"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-blueberry" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/kiwi.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> kiwi </h3>
+                    <p class="price-per-unit"> Rs 2,200/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-kiwi"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-kiwi" min="0" step="0.1" placeholder="0">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/promogranate.jpg" alt="" class="product-img" >
+                    <h3 class="product-title"> Promogranate </h3>
+                    <p class="price-per-unit"> Rs 800/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-promogranate"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-promogranate" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/coconut.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Coconut </h3>
+                    <p class="price-per-unit"> Rs 200/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-coconut"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-coconut" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/papaya.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Papaya </h3>
+                    <p class="price-per-unit"> Rs 300/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-papapya"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-papapya" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/rabutang.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Rabutang </h3>
+                    <p class="price-per-unit"> Rs 500/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-rabutang"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-rabutang" min="0" step="0.1" placeholder="0">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/woodapple.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Woodapple </h3>
+                    <p class="price-per-unit"> Rs 400/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-woodapple"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-woodapple" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/breadfruit.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Breadfruit </h3>
+                    <p class="price-per-unit"> Rs 200/Kg </p>
+                    <div class="quantity-input">
+                        <label for="breadfruit"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="breadfruit" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Fruits/jackfruit.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Jackfruit </h3>
+                    <p class="price-per-unit"> Rs 300/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-jackfruit"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-jackfruit" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                
+               
+                
+                
+            </section>
+        </div>
+    
+
+        <div class="container">
+            <h2 class="product-head-title"> Vegetables </h2>
+              <section class="products-grid" id="vegetables">
+                
+            
+                <div class="product-item">
+                    <img src="Images/Vegtables/cauliflower.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Cauliflower </h3>
+                    <p class="price-per-unit"> Rs 1,000/Kg </p>
+                    <div class="quantity-input">
+                        <label for="cauliflower"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="cauliflower" min="0" step="0.1" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="Images/Vegtables/potatoes.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Potatoes </h3>
+                    <p class="price-per-unit"> Rs 500/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-potatoes"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-potatoes" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/onions.webp" alt="" class="product-img">
+                    <h3 class="product-title"> Onions </h3>
+                    <p class="price-per-unit"> Rs 300/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-onions"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-onions" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/tomato.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Tomatoes </h3>
+                    <p class="price-per-unit"> Rs 200/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-tomato"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-tomato" min="0" step="0.1" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="Images/Vegtables/bellPeper.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Bell peper </h3>
+                    <p class="price-per-unit"> Rs 1,200/Kg </p>
+                    <div class="quantity-input">
+                        <label for="bell-pepper"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="bell-pepper" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/pumpkin.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Pumpkin </h3>
+                    <p class="price-per-unit"> Rs 300/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-pumpkin"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-pumpkin" min="0" step="0.1" placeholder="0">
+                    </div>
+
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/leaks.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Leaks </h3>
+                    <p class="price-per-unit"> Rs 800/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-leaks"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-leaks" min="0" step="0.1" placeholder="0">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/beans.webp" alt="" class="product-img">
+                    <h3 class="product-title"> Beans </h3>
+                    <p class="price-per-unit"> Rs 1,200/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-beans"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-beans" min="0" step="0.1" placeholder="0">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/betroot.jpeg" alt="" class="product-img">
+                    <h3 class="product-title"> Betroot </h3>
+                    <p class="price-per-unit"> Rs 400/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-betroot"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-betroot" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/spinach.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Spinach </h3>
+                    <p class="price-per-unit"> Rs 600/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-spinanch"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-spinanch" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/sweetCorn.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Sweet corns </h3>
+                    <p class="price-per-unit"> Rs 400/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-sweetCorn"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-sweetCorn" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/cabbage.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Cabbage </h3>
+                    <p class="price-per-unit"> Rs 400/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-cabbage"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-cabbage" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/garlic.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Garlic </h3>
+                    <p class="price-per-unit"> Rs 600/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-garlic"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-garlic" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/ginger.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Ginger </h3>
+                    <p class="price-per-unit"> Rs 600/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-ginger"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-ginger" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/ladyFingers.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Lady fingers </h3>
+                    <p class="price-per-unit"> Rs 700/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-lady-fingers"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-lady-fingers" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                
+                <div class="product-item">
+                    <img src="Images/Vegtables/carrot.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Carrot </h3>
+                    <p class="price-per-unit"> Rs 800/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-carrot"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-carrot" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/cucumber.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Cucumber </h3>
+                    <p class="price-per-unit"> Rs 300/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-cucumber"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-cucumber" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/greenChili.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Green Chili </h3>
+                    <p class="price-per-unit"> Rs 800/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-green-chili"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-green-chili" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/redChili.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Red Chili </h3>
+                    <p class="price-per-unit"> Rs 600/Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-red-chili"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-red-chili" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="Images/Vegtables/bananaPeper.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Banana peper </h3>
+                    <p class="price-per-unit"> Rs 600Kg </p>
+                    <div class="quantity-input">
+                        <label for="quantity-banana-peper"> Quantity (kg): </label>
+                        <input type="number" class="quantity-value" id="quantity-banana-peper" min="0" step="0.1" placeholder="0">
+                    </div>
+                    
+                </div>
+
+
+
+                
+            </section>
+        
+        </div>
+
+            
+            <div class="container">
+                <h2 class="product-head-title"> Diary Products </h2>
+
+                    <section class="products-grid" id="diaryproducts">
+                        <h3 class="subcategory-title"> Ice-Cream</h3>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/ice-cream-BR.jpg" alt="" class="product-img">
+                            <h3 class="product-title"> Ice cream BR - Chocolate </h3>
+                            <p class="price-per-unit"> Rs 1,050 </p>
+                            <div class="quantity-input">
+                                <label for="quantity-ice-cream-BR"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="quantity-ice-cream-BR" name="quantity-ice-cream-BR" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/ice-cream-imorich.png" alt="" class="product-img">
+                            <h3 class="product-title"> Ice cream - imorich </h3>
+                            <p class="price-per-unit"> Rs 1,250 </p>
+                            <div class="quantity-input">
+                                <label for="imorich"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="imorich"  min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/BR-cherries-jubilee.png" alt="" class="product-img">
+                            <h3 class="product-title"> Ice cream - Cherry Jubilee </h3>
+                            <p class="price-per-unit"> Rs 1,800  </p>
+                            <div class="quantity-input">
+                                <label for="BR-cherries-jubilee"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="BR-cherries-jubilee" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/EHchocolate.jpg" alt="" class="product-img">
+                            <h3 class="product-title"> Ice Cream - Elephant House chocolate </h3>
+                            <p class="price-per-unit"> Rs 900 </p>
+                            <div class="quantity-input">
+                                <label for="EH-Chocolate"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="EH-Chocolate" min="0" step="1" placeholder="0">
+                            </div>
+                           
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/chunckyRocky.jpeg" alt="" class="product-img">
+                            <h3 class="product-title"> Ice Cream - Chuncky rocky road </h3>
+                            <p class="price-per-unit"> Rs 1,500 </p>
+                            <div class="quantity-input">
+                                <label for="chunckyRocky"> Quantity : </label>
+                                <input type="number" class="quantity-value" id="chunckyRocky" min="0" step="1" placeholder="0">
+                            </div>
+                           
+                        </div>
+
+                        <h3 class="subcategory-title"> Chocolate</h3>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/ferreroRocher.webp" alt="" class="product-img">
+                            <h3 class="product-title"> Ferrero Rocher </h3>
+                            <p class="price-per-unit"> Rs 3,500 per pack </p>
+                            <div class="quantity-input">
+                                <label for="ferreroRocher"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="ferreroRocher" min="0" step="1" placeholder="0">
+                            </div>
+                           
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/choclate-galaxy.jpg" alt="" class="product-img">
+                            <h3 class="product-title"> choclate-galaxy </h3>
+                            <p class="price-per-unit"> Rs 1,0000 </p>
+                            <div class="quantity-input">
+                                <label for="chocolate-galaxy"> Quantity (kg): </label>
+                                <input type="number" class="quantity-value" id="chocolate-galaxy" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/chocolate-diarymilk.jpg" alt="" class="product-img">
+                            <h3 class="product-title"> Diary Milk </h3>
+                            <p class="price-per-unit"> Rs 500 per packet </p>
+                            <div class="quantity-input">
+                                <label for="chocolate-diarymilk"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="chocolate-diarymilk" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/hersheys.jpg" alt="" class="product-img">
+                            <h3 class="product-title">  Hersheys Oat flavour </h3>
+                            <p class="price-per-unit"> Rs 750 per packet </p>
+                            <div class="quantity-input">
+                                <label for="hersheys"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="hersheys" min="0" step="1" placeholder="0">
+                            </div>
+                           
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/kitkat.jpg" alt="" class="product-img">
+                            <h3 class="product-title">  Kitkat (Nestle) </h3>
+                            <p class="price-per-unit"> Rs 600 per packet </p>
+                            <div class="quantity-input">
+                                <label for="kitkat"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="kitkat" min="0" step="1" placeholder="0">
+                            </div>
+                           
+                        </div>
+                        <h3 class="subcategory-title"> Milk </h3>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/milk-highland.jpg" alt="" class="product-img">
+                            <h3 class="product-title"> Milk - Highland </h3>
+                            <p class="price-per-unit"> Rs 1,500 </p>
+                            <div class="quantity-input">
+                                <label for="highlandMilk"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="highlandMilk" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/milk-kotmale.jpg" alt="" class="product-img">
+                            <h3 class="product-title"> Milk - Kotmale </h3>
+                            <p class="price-per-unit"> Rs 450 per bottle </p>
+                            <div class="quantity-input">
+                                <label for="kotmaleMilk"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="kotmaleMilk" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/AnchorMilk.jpg" alt="" class="product-img">
+                            <h3 class="product-title"> Milk - Anchor  </h3>
+                            <p class="price-per-unit"> Rs 1,200 </p>
+                            <div class="quantity-input">
+                                <label for="AnchorMilk"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="AnchorMilk" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/kotmaleMilkOats.jpg" alt="" class="product-img">
+                            <h3 class="product-title"> Kotmale milk with oats </h3>
+                            <p class="price-per-unit"> Rs 900 </p>
+                            <div class="quantity-input">
+                                <label for="kotmaleMilkOats"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="kotmaleMilkOats" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/dailyChocolateMilk.png" alt="" class="product-img">
+                            <h3 class="product-title"> Daily chocolate milk </h3>
+                            <p class="price-per-unit"> Rs 500 </p>
+                            <div class="DailyMilkChocolate">
+                                <label for="DailyMilkChocolate"> Quantity (kg): </label>
+                                <input type="number" class="quantity-value" id="DailyMilkChocolate" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                        </div>
+                        <h3 class="subcategory-title"> Butter & Cheese </h3>
+                        <div class="product-item">
+                            <img src="Images/diaryProducts/butter-astra.webp" alt="" class="product-img">
+                            <h3 class="product-title"> Butter - Astra</h3>
+                            <p class="price-per-unit"> Rs 950</p>
+                            <div class="quantity-input">
+                                <label for="AstraButter"> Quantity : </label>
+                                <input type="number" class="quantity-value" id="AstraButter" min="0" step="1" placeholder="0">
+                            </div>
+                            
+                       </div>
+                       <div class="product-item">
+                        <img src="Images/diaryProducts/butter-kotmale.jpg" alt="" class="product-img">
+                        <h3 class="product-title"> Butter - Kotmale </h3>
+                        <p class="price-per-unit"> Rs 600 </p>
+                        <div class="quantity-input">
+                            <label for="kotmaleButter"> Quantity (kg): </label>
+                            <input type="number" class="quantity-value" id="kotmaleButter" min="0" step="1" placeholder="0">
+                        </div>
+                        
+                   </div>
+                   <div class="product-item">
+                    <img src="Images/diaryProducts/butter-pelwatte.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Butter - pelwatte </h3>
+                    <p class="price-per-unit"> Rs 450 </p>
+                    <div class="quantity-input">
+                        <label for="butter-pelwatte"> Quantity: </label>
+                        <input type="number" class="quantity-value" id="butter-pelwatte" min="0" step="1" placeholder="0">
+                    </div>
+                    
+               </div>
+               <div class="product-item">
+                    <img src="Images/diaryProducts/kraftCheese.jpg" alt="" class="product-img">
+                    <h3 class="product-title"> Kraft - Mozzarella cheese</h3>
+                    <p class="price-per-unit"> Rs 2,500 per pack </p>
+                    <div class="quantity-input">
+                        <label for="kraftCheese"> Quantity: </label>
+                        <input type="number" class="quantity-value" id="kraftCheese" min="0" step="1" placeholder="0">
+                    </div>
+               </div>
+                <div class="product-item">
+                    <img src="Images/diaryProducts/richLifeCheese.avif" alt="" class="product-img">
+                    <h3 class="product-title"> Cheese slices - rich life</h3>
+                    <p class="price-per-unit"> Rs 490 </p>
+                    <div class="rickLifeCheese">
+                        <label for="richLifeCheese"> Quantity: </label>
+                        <input type="number" class="quantity-value" id="richLifeCheese" min="0" step="1" placeholder="0">
+                    </div>
+            
+                </div>
+
+
+
+                        
+                
+             </section>
+            </div>
+
+            <!--<section id="meat&Seafood">-->
+                <div class="container">
+                
+                    <h2 class="product-head-title"> Meat & Sea food  </h2>
+                        <section class="products-grid" id="meat&Seafood">
+                            <div class="product-item">
+                                <img src="Images/MeatSeafood/prima-sausages.webp" alt="" class="product-img">
+                                <h3 class="product-title"> Prima Sausages (150g) </h3>
+                                <p class="price-per-unit"> Rs 1,200 </p>
+                                <div class="quantity-input">
+                                    <label for="prima-sausages"> Quantity: </label>
+                                    <input type="number" class="quantity-value" id="prima-sausages" min="0" step="1" placeholder="0">
+                                </div>
+                                
+                           </div>
+                           <div class="product-item">
+                                <img src="Images/MeatSeafood/keellsKrestSausages.jpeg" alt="" class="product-img">
+                                <h3 class="product-title"> Chicken sausages - Keells Krest (250g) </h3>
+                                <p class="price-per-unit"> Rs 650  </p>
+                                <div class="quantity-input">
+                                    <label for="keellsKrestSausages"> Quantity: </label>
+                                    <input type="number" class="quantity-value" id="keellsKrestSausages" min="0" step="1" placeholder="0">
+                                </div>
+                                
+                           </div>
+                           <div class="product-item">
+                                <img src="Images/MeatSeafood/kochibites.webp" alt="" class="product-img">
+                                <h3 class="product-title"> Cresent chicken kochibites (500g)</h3>
+                                <p class="price-per-unit"> Rs 1,750 </p>
+                                <div class="quantity-input">
+                                    <label for="kochibites"> Quantity: </label>
+                                    <input type="number" class="quantity-value" id="kochibites" min="0" step="1" placeholder="0">
+                                </div>
+                            </div>
+                       
+                       <div class="product-item">
+                            <img src="Images/MeatSeafood/keelsKrest-ChickenDrumsticks.webp" alt="" class="product-img">
+                            <h3 class="product-title"> Keells Krest Chicken drumstick (300g) </h3>
+                            <p class="price-per-unit"> Rs 920 </p>
+                            <div class="quantity-input">
+                                <label for="keelsKrest-ChickenDrumsticks"> Quantity: </label>
+                                <input type="number" class="quantity-value" id="keelsKrest-ChickenDrumsticks" min="0" step="1" placeholder="0">
+                            </div>
+                        
+                         </div>
+                   <div class="product-item">
+                    <img src="Images/MeatSeafood/cresent-chicken-burger.webp" alt="" class="product-img">
+                    <h3 class="product-title"> Cresent chicken burger (200g) </h3>
+                    <p class="price-per-unit"> Rs 535 </p>
+                    <div class="quantity-input">
+                        <label for="cresent-chicken-burger"> Quantity: </label>
+                        <input type="number" class="quantity-value" id="cresent-chicken-burger" min="0" step="1" placeholder="0">
+                    </div>
+                    
+               </div>
+               <div class="product-item">
+                <img src="Images/MeatSeafood/keells-krest-chicken-nuggets.webp" alt="" class="product-img">
+                <h3 class="product-title"> Keells krest chicken nuggets (240g) </h3>
+                <p class="price-per-unit"> Rs 750 </p>
+                <div class="quantity-input">
+                    <label for="keells-krest-chicken-nuggets"> Quantity (kg): </label>
+                    <input type="number" class="quantity-value" id="keells-krest-chicken-nuggets" min="0" step="0.1" placeholder="0">
+                </div>
+                
+           </div>
+           <div class="product-item">
+            <img src="Images/MeatSeafood/fresh-chicken-bairaha.jpg" alt="" class="product-img">
+            <h3 class="product-title"> Chicken Bairaha (1300g) </h3>
+            <p class="price-per-unit"> Rs 1,200 </p>
+            <div class="quantity-input">
+                <label for="fresh-chicken-bairaha"> Quantity : </label>
+                <input type="number" class="quantity-value" id="fresh-chicken-bairaha" min="0" step="1" placeholder="0">
+            </div>
+            
+       </div>
+            <div class="product-item">
+                <img src="Images/MeatSeafood/pre-cut-Baraha-chicken.jpg" alt="" class="product-img">
+                <h3 class="product-title"> Chicken Barha - Pre cut (300g) </h3>
+                <p class="price-per-unit"> Rs 460 </p>
+                <div class="quantity-input">
+                    <label for="pre-cut-Baraha-chicken"> Quantity: </label>
+                    <input type="number" class="quantity-value" id="pre-cut-Baraha-chicken" min="0" step="1" placeholder="0">
+                </div>
+                
+        </div>
+            <div class="product-item">
+                <img src="Images/MeatSeafood/chicken-sausages-goldi.jpg" alt="" class="product-img">
+                <h3 class="product-title"> Chicken sausages - Goldi (500g) </h3>
+                <p class="price-per-unit"> Rs 870 </p>
+                <div class="quantity-input">
+                    <label for="chicken-sausages-goldi"> Quantity: </label>
+                    <input type="number" class="quantity-value" id="chicken-sausages-goldi"  min="0" step="1" placeholder="0">
+                </div>
+                
+            </div>
+            <div class="product-item">
+                <img src="Images/MeatSeafood/keels-krest-meatballs.webp" alt="" class="product-img">
+                <h3 class="product-title"> MeatBalls Keells Krest(500g) </h3>
+                <p class="price-per-unit"> Rs 1,100 </p>
+                <div class="quantity-input">
+                    <label for="keels-krest-meatballs"> Quantity: </label>
+                    <input type="number" class="quantity-value" id="keels-krest-meatballs" min="0" step="1" placeholder="0">
+                </div>
+                
+            </div>
+            <div class="product-item">
+                <img src="Images/MeatSeafood/cresent-fish-mini-kieves.webp" alt="" class="product-img">
+                <h3 class="product-title"> Cresent Fish mini Kieves (240g) </h3>
+                <p class="price-per-unit"> Rs 730 </p>
+                <div class="quantity-input">
+                    <label for="cresent-fish-mini-kieves"> Quantity: </label>
+                    <input type="number" class="quantity-value" id="cresent-fish-mini-kieves" min="0" step="1" placeholder="0">
+                </div>
+                
+        </div>
+        <div class="product-item">
+            <img src="Images/MeatSeafood/keells-krest-fish-fingers.webp" alt="" class="product-img">
+            <h3 class="product-title"> Kells kresh Fish Fingers (250g) </h3>
+            <p class="price-per-unit"> Rs 750 </p>
+            <div class="quantity-input">
+                <label for="keells-krest-fish-fingers"> Quantity: </label>
+                <input type="number" class="quantity-value" id="keells-krest-fish-fingers" min="0" step="1" placeholder="0">
+            </div>
+            
+        </div>
+        <div class="product-item">
+            <img src="Images/MeatSeafood/prawns.jpg" alt="" class="product-img">
+            <h3 class="product-title"> Prawns </h3>
+            <p class="price-per-unit"> Rs 1,700 /Kg </p>
+            <div class="quantity-input">
+                <label for="prawns"> Quantity (kg): </label>
+                <input type="number" class="quantity-value" id="prawns" min="0" step="0.1" placeholder="0">
+            </div>
+            
+        </div>
+        <div class="product-item">
+            <img src="Images/MeatSeafood/thalapath.jpg" alt="" class="product-img">
+            <h3 class="product-title"> Thalapath </h3>
+            <p class="price-per-unit"> Rs 2,000 /Kg </p>
+            <div class="thalapath">
+                <label for="thalapath"> Quantity (kg): </label>
+                <input type="number" class="quantity-value" id="thalapath" min="0" step="0.1" placeholder="0">
+            </div>
+            
+       </div>
+       <div class="product-item">
+        <img src="Images/MeatSeafood/sudaya.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Sudaya </h3>
+        <p class="price-per-unit"> Rs 1,500/Kg </p>
+        <div class="sudaya">
+            <label for="sudaya"> Quantity (kg): </label>
+            <input type="number" class="quantity-value" id="sudaya" min="0" step="0.1" placeholder="0">
+        </div>
+        
+   </div>
+   
+  
+
+
+ </section>
+</div>
+
+<!--<section id="baking&Cooking">-->
+<div class="container">
+    <h2 class="product-head-title"> Baking and Cooking Ingredients </h2>
+        <section class="products-grid" id="baking&Cooking">
+
+    <div class="product-item">
+        <img src="Images/bakingCooking/Prima-flour.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Prima flour (1kg) </h3>
+        <p class="price-per-unit"> Rs 290 </p>
+        <div class="quantity-input">
+            <label for="Prima-flour"> Quantity: </label>
+            <input type="number" class="quantity-value" id="Prima-flour" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/Riceflour-Harishchandra.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Rice flour - Harishchandra (450g)</h3>
+        <p class="price-per-unit"> Rs 300 </p>
+        <div class="quantity-input">
+            <label for="Riceflour-Harishchandra"> Quantity: </label>
+            <input type="number" class="quantity-value" id="Riceflour-Harishchandra" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/Sugar.jpeg" alt="" class="product-img">
+        <h3 class="product-title"> Sugar (500g) </h3>
+        <p class="price-per-unit"> Rs 1,170 </p>
+        <div class="sugar">
+            <label for="sugar"> Quantity: </label>
+            <input type="number" class="quantity-value" id="sugar" min="0" step="1" placeholder="0">
+        </div>
+       
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/salt.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Salt(400g) </h3>
+        <p class="price-per-unit"> Rs 120 </p>
+        <div class="quantity-input">
+            <label for="salt"> Quantity: </label>
+            <input type="number" class="quantity-value" id="salt" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/icing.webp" alt="" class="product-img">
+        <h3 class="product-title"> Icing (500g) </h3>
+        <p class="price-per-unit"> Rs 220 </p>
+        <div class="quantity-input">
+            <label for="icing"> Quantity: </label>
+            <input type="number" class="quantity-value" id="icing" min="0" step="1" placeholder="0">
+        </div>
+       
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/yeast.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Yeast (60g)  </h3>
+        <p class="price-per-unit"> Rs 220 </p>
+        <div class="quantity-input">
+            <label for="yeast"> Quantity: </label>
+            <input type="number" class="quantity-value" id="yeast" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/mot" alt="" class="product-img">
+        <h3 class="product-title"> Vanila Essence (280ml)  </h3>
+        <p class="price-per-unit"> Rs 220 </p>
+        <div class="quantity-input">
+            <label for="motha-vanila-essence"> Quantity: </label>
+            <input type="number" class="quantity-value" id="motha-vanila-essence" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/baking-powder.jpeg" alt="" class="product-img">
+        <h3 class="product-title"> Baking powder (100g) </h3>
+        <p class="price-per-unit"> Rs 150 </p>
+        <div class="quantity-input">
+            <label for="baking-powder"> Quantity: </label>
+            <input type="number" class="quantity-value" id="baking-powder" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/cocoa-powder.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Cocoa powder (50g) </h3>
+        <p class="price-per-unit"> Rs 380 </p>
+        <div class="quantity-input">
+            <label for="cocoa-powder"> Quantity: </label>
+            <input type="number" class="quantity-value" id="cocoa-powder" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/Eggs.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Eggs </h3>
+        <p class="price-per-unit"> Rs 360 </p>
+        <div class="quantity-input">
+            <label for="eggs"> Quantity: </label>
+            <input type="number" class="quantity-value" id="eggs" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/breadcrumbs.webp" alt="" class="product-img">
+        <h3 class="product-title"> Breadcrumbs (400g) </h3>
+        <p class="price-per-unit"> Rs 360 </p>
+        <div class="quantity-input">
+            <label for="breadcrumbs"> Quantity: </label>
+            <input type="number" class="quantity-value" id="breadcrumbs" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/fortune-vegetable-oil.jpeg" alt="" class="product-img">
+        <h3 class="product-title"> Fortune Vegetable oil (1L)</h3>
+        <p class="price-per-unit"> Rs 1,500 </p>
+        <div class="quantity-input">
+            <label for="fortune-vegetable-oil"> Quantity: </label>
+            <input type="number" class="quantity-value" id="fortune-vegetable-oil" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/vinegar.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Vinegar (350ml) </h3>
+        <p class="price-per-unit"> Rs 170 </p>
+        <div class="quantity-input">
+            <label for="vinegar"> Quantity: </label>
+            <input type="number" class="quantity-value" id="vinegar" min="0" step="1" placeholder="0">
+        </div>
+        
+    </div>
+    
+    <div class="product-item">
+        <img src="Images/bakingCooking/cinnamon-powder.jpg" alt="" class="product-img">
+        <h3 class="product-title"> cinnamon powder (40g) </h3>
+        <p class="price-per-unit"> Rs 110 </p>
+        <div class="quantity-input">
+            <label for="cinnamon-powder"> Quantity (kg): </label>
+            <input type="number" class="quantity-value" id="cinnamon-powder" min="0" step="0.1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/tumeric.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Tumeric (100g) </h3>
+        <p class="price-per-unit"> Rs 110 </p>
+        <div class="quantity-input">
+            <label for="tumeric"> Quantity (kg): </label>
+            <input type="number" class="quantity-value" id="tumeric" min="0" step="0.1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/black-pepper.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Black peper (250g) </h3>
+        <p class="price-per-unit"> Rs 980 </p>
+        <div class="quantity-input">
+            <label for="black-pepper"> Quantity (kg): </label>
+            <input type="number" class="quantity-value" id="black-pepper" min="0" step="0.1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/corriander.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Corriander (100g) </h3>
+        <p class="price-per-unit"> Rs 370 </p>
+        <div class="quantity-input">
+            <label for="corriander"> Quantity (kg): </label>
+            <input type="number" class="quantity-value" id="corriander" min="0" step="0.1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/mustard-seeds.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Mustard Seeds (50g)  </h3>
+        <p class="price-per-unit"> Rs 60 </p>
+        <div class="quantity-input">
+            <label for="mustard-seeds"> Quantity (kg): </label>
+            <input type="number" class="quantity-value" id="mustard-seeds" min="0" step="0.1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/Cardamom.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Cardamon (250g) </h3>
+        <p class="price-per-unit"> Rs 630 </p>
+        <div class="quantity-input">
+            <label for="Cardamon"> Quantity (kg): </label>
+            <input type="number" class="quantity-value" id="Cardamon" min="0" step="0.1" placeholder="0">
+        </div>
+        
+    </div>
+    <div class="product-item">
+        <img src="Images/bakingCooking/cloves.jpg" alt="" class="product-img">
+        <h3 class="product-title"> Cloves (50g) </h3>
+        <p class="price-per-unit"> Rs 350 </p>
+        <div class="quantity-input">
+            <label for="cloves"> Quantity (kg): </label>
+            <input type="number" class="quantity-value" id="cloves" min="0" step="0.1" placeholder="0">
+        </div>
+        
+    </div>
+    
+
+
+                
+
+        </section>
+        <br><br>
+    </div>
+    <h1> Thank you for visiting our website. We hope you enjoyed being here. </h1>
+
+</main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Grocies Supermarket</h2>
+                <p>Stay in touch with us</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <h2>Quick Links</h2>
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="OrderPage.html">Order Page</a></li>
+                    <li><a href="LoyaltyRegistration.html">Loyalty</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h2>Contact Us</h2>
+                <p><i class="fa-solid fa-envelope"></i> Email: GrociesSupermarket@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> Landline: +0112 123 456</p>
+                <p><i class="fa-solid fa-map-marker-alt"></i> Address: No:8, Marine drive, Colombo</p>
+                <p><i class="fa-solid fa-store"></i> Branches: Colombo, Bambalapitiya & Kollupitiya</p>
+            </div>
+            <div class="bottom-bar">
+                <p>2024 &copy; Grocies Supermarket. All rights reserved!</p>
+            </div>
+        </div>
+    </footer>
+
+        <script src="Scripts/cart.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Supermarket Login/Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="apple-touch-icon" sizes="180x180" href="PWA_Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="PWA_Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="PWA_Icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="cssStyles/signup-login.css">
+   
+</head>
+<body>
+    <header class="head-color">
+        
+        
+                <div class="container-header">
+                    
+                        <div class="logo">
+                            <img class="grocies-img" src="Grocies_Supermarket_logo.png" alt="Grocies Supermarket Logo">
+                        </div>
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" placeholder="Search your Product name/brand">
+                        </div>
+                        
+                        <div class="buttons-header desktop-buttons">
+                            <button class="delivery-btn" onclick="window.location.href='OrderPage.html'">
+                                <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                            </button>
+                            <button class="store-btn" onclick="window.location.href='AboutUs.html'">
+                                <i class="fa-solid fa-location-dot"></i> Store Location
+                            </button>
+                            <button class="signup-btn" onclick="window.location.href='signup-login.html'">
+                                <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                            </button>
+                        </div>
+                        
+                        <div class="buttons-header mobile-buttons">
+                            <button class="delivery-btn-mobile" onclick="window.location.href='OrderPage.html'">
+                                <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                            </button>
+                            <button class="store-btn-mobile" onclick="window.location.href='AboutUs.html'">
+                                <i class="fa-solid fa-location-dot"></i> Store Location
+                            </button>
+                            <button class="signup-btn-mobile" onclick="window.location.href='signup-login.html'">
+                                <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                            </button>
+                        </div>
+                    </div>
+            
+            
+                <nav class="nav-bar"> 
+
+                        <ul> 
+                            <li>
+                                <div class="dropdown">
+                                    <button class="dropbutton"> Products
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="Vegetables.html"> Vegetables </a>
+                                        <a href="DiaryProducts.html"> Diary Products</a>
+                                        <a href="CosmeticsandSkinCare.html"> Cosmetic and Skin Care </a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li> <a href="home.html"> Home  </a> </li>
+
+                            <li> <a href="OrderPage.html"> Order Page  </a> </li>
+                            <li> <a href="LoyaltyRegistration.html"> Loyalty Registration </a> </li>
+                            <li> <a href="AboutUs.html"> About us </a> </li>
+                            <li> <a href="cartPage.html"> Cart <i class="fa-solid fa-cart-shopping"></i> </a> </li> 
+                        </ul>
+
+                      
+
+                </nav>
+            
+        
+    
+</header>
+
+
+
+
+
+
+
+
+
+
+
+<main>
+    <div class="container">
+        <form action="#" class="form">
+            <h2>Login / Sign Up</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="forgot-password">
+                <a href="#" class="forgot-password-link">Forgot Password?</a>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <button type="submit" class="btn">Login / Sign Up</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h2>Grocies Supermarket</h2>
+            <p>Stay in touch with us</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <h2>Quick Links</h2>
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="OrderPage.html">Order Page</a></li>
+                <li><a href="LoyaltyRegistration.html">Loyalty</a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h2>Contact Us</h2>
+            <p><i class="fa-solid fa-envelope"></i> Email: GrociesSupermarket@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> Landline: +0112 123 456</p>
+            <p><i class="fa-solid fa-map-marker-alt"></i> Address: No:8, Marine drive, Colombo</p>
+            <p><i class="fa-solid fa-store"></i> Branches: Colombo, Bambalapitiya & Kollupitiya</p>
+        </div>
+        <div class="bottom-bar">
+            <p>2024 &copy; Grocies Supermarket. All rights reserved!</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

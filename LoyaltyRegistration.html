@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Loyalty Registration</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="apple-touch-icon" sizes="180x180" href="PWA_Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="PWA_Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="PWA_Icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="cssStyles/loyaltyregistration.css">
+    
+</head>
+<body>
+    <header class="head-color">
+        
+        
+        <div class="container-header">
+            
+                <div class="logo">
+                    <img class="grocies-img" src="Grocies_Supermarket_logo.png" alt="Grocies Supermarket Logo">
+                </div>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search your Product name/brand">
+                </div>
+                
+                <div class="buttons-header desktop-buttons">
+                            <button class="delivery-btn" onclick="window.location.href='OrderPage.html'">
+                                <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                            </button>
+                            <button class="store-btn" onclick="window.location.href='AboutUs.html'">
+                                <i class="fa-solid fa-location-dot"></i> Store Location
+                            </button>
+                            <button class="signup-btn" onclick="window.location.href='signup-login.html'">
+                                <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                            </button>
+                        </div>
+                        
+                        <div class="buttons-header mobile-buttons">
+                            <button class="delivery-btn-mobile" onclick="window.location.href='OrderPage.html'">
+                                <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                            </button>
+                            <button class="store-btn-mobile" onclick="window.location.href='AboutUs.html'">
+                                <i class="fa-solid fa-location-dot"></i> Store Location
+                            </button>
+                            <button class="signup-btn-mobile" onclick="window.location.href='signup-login.html'">
+                                <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                            </button>
+                        </div>
+                    </div>
+            
+    
+        <nav class="nav-bar"> 
+
+                <ul> 
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbutton"> Products
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Vegetables.html"> Vegetables </a>
+                                <a href="DiaryProducts.html"> Diary Products</a>
+                                <a href="CosmeticsandSkinCare.html"> Cosmetic and Skin Care </a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li> <a href="home.html"> Home  </a> </li>
+
+                    <li> <a href="OrderPage.html"> Order Page  </a> </li>
+                    <li> <a href="LoyaltyRegistration.html"> Loyalty Registration </a> </li>
+                    <li> <a href="AboutUs.html"> About us </a> </li>
+                    <li> <a href="cartPage.html"> Cart <i class="fa-solid fa-cart-shopping"></i> </a> </li> 
+                </ul>
+
+              
+
+        </nav>
+    
+   
+
+</header>
+    <main>
+        <div class="registration-form-container">
+            <form action="#" method="post"> 
+            <h1> Loyalty Registration Form </h1>
+            <h2> Below form can only be used by grocies supermarket customer's only. </h2>
+            <h2> Register Now to become a loyalty member at Grcoies Supermarket. </h2>
+            <br>
+            <fieldset>
+                <legend> Customer's Personal Info </legend>
+                <br> 
+                <div class="input-box">
+                    <label for="textbox01"> Customer's Full Name: </label>
+                        <select name="Title" id="Title">
+                            <option value="Title"> Title </option>
+                            <option value="Mr"> Mr </option>
+                            <option value="Mrs"> Mrs </option>
+                            <option value="Miss"> Miss </option>
+                            </select>
+                            <input type="text" id="textbox01" name="CustomerName" maxlength="15" placeholder="Enter your full name:">
+                            <br>
+               </div>
+               <div class="input-box">
+                        <label for="textbox03"> NIC No: </label>
+                        <input type="text" id="textbox03" name="NIC" maxlength="12" placeholder="XXXXXXXXXXXV">
+                </div>
+                    <br><br>
+                    <br>
+                    
+                    <label for="gender-male"> Gender: </label>
+                    <input type="radio" id="gender-male" name="gender" value="male">
+                    <label for="gender-male"> Male </label>
+
+                    <input type="radio" id="gender-female" name="gender" value="female">
+                    <label for="gender-female"> Female </label>
+                    <br><br>
+
+                    <label for="datefield01"> DOB: </label>
+                    <input type="date" id="datefield01" name="dob">
+                    <br><br>
+
+                    <label for="address1"> Your Address: </label>
+                    <input type="text" id="address1" name="address" maxlength="40">
+                    <br><br>
+
+                    <label for="transaction"> Transaction ID: </label>
+                    <input type="text" id="transaction" name="transaction">
+                    <br><br>
+
+
+
+
+
+
+
+
+
+
+
+                </fieldset>
+                <br><br>
+
+                <fieldset>
+                    <legend> Customer's SignUp Info </legend>
+                            
+                            <label for="textbox04"> UserName:  </label>
+                            <input type="text" id="textbox04" name="username"  maxlength="8" required>
+                            <h5> Do not include special characters @/!/#/& </h5>
+                            <h5> Your username must be between 4 to 8 characters</h5>
+                            
+                            <label for="email01"> Email: </label>
+                            <input type="email" id="email01" placeholder="Enter your email">
+                            <input type="button" onclick="alert('kindly check your email address to confirm it.')" value="Submit Email Address">
+                            <br><br>
+                            
+                            <label for="phone">Enter a phone number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="07*-****-***" pattern="[0-7]{3}-[0-9]{4}-[0-9]{3}">
+                            <input type="button" onclick="alert('Your Phone No has been verified')" value="Verify your Phone Number">
+                            
+                            <br><br>
+                            <label for="password01"> Password: </label>
+                            <input type="password" id="password01" placeholder="Enter your password"  maxlength="12" required>
+                            <h5> You can include include special characters @/!/#/& for strong passwords </h5>
+                            <h5> Your Password must be between 4 to 8 characters</h5>
+            
+                            <label for="password01"> Confirm Password: </label>
+                            <input type="password" id="password02" placeholder="Enter the same password again"  maxlength="12" required>
+            
+                            <input type="button" onclick="alert('Your password has been confirmed')" value="Submit Password">
+                            <input type="reset" value="Reset your password">
+                            <br><br>
+            
+                            <input type="submit" value="Submit your email and password">
+                            <input type="reset" value="Clear data">
+                            <br>
+                </fieldset>
+                 <br>
+                <label for="transactionRights">Transaction Rights:</label>
+                <input type="text" id="transactionRights" name="transactionRights">
+                <br>
+                    <br>
+                    <input type="checkbox" id="Rights01" value="option">
+                    <label for="Rights01"> I herby agree on terms and conditions </label>
+                    <br>
+            
+                    <input type="checkbox" id="Rights02" value="option">
+                    <label for="Rights02"> I cannot use my loyaltyNo in someone else acc. </label>
+                    <br>
+            
+                    <br><br>
+                    <input type="button" onclick="alert('Thank you for filling our Loyalty Registration form. Your response has been submitted. We will contact you via email to give your loyaltyNo.')" value="Submit form data">
+                    <input type="reset" value="Clear form data">
+            
+             </form>     
+                
+               <div class="benefits-loyalty">
+                    <h2> Benefits of being a Loyalty Member in Grocies Supermarket. </h2>
+                    <ul>
+                        <li> Easy access to discounts available for loyalty members on our latest products. </li>
+                        <li> Get discounts on delivery. (Premimum members have 25% of free delivery to their door step) </li>
+                        <li> By earning points (from loyalty scheme below) you can use it for your next purchase where the amount is reduced. </li>
+                    
+                    </ul>
+                </div>
+                  
+                <div>
+                    <h2>Loyalty Scheme available for loyalty members</h2>
+                    <br>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Monthly spent at Grocies Supermarket</th>
+                                <th>Points Earned</th>
+                                <th>Bonus points for the Month</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Upto Rs30,000</td>
+                                <td>1 point for every Rs100 spent</td>
+                                <td>1 bonus point</td>
+                            </tr>
+                            <tr>
+                                <td>Rs30,000 to 60,000</td>
+                                <td>2 points for every Rs100 spent</td>
+                                <td>2 bonus points</td>
+                            </tr>
+                            <tr>
+                                <td>Over Rs60,000</td>
+                                <td>5 points for every Rs100 spent</td>
+                                <td>5 bonus points</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <!-- Add any footer content if needed -->
+                        </tfoot>
+                    </table>
+                    <br>
+            
+                    <h2>At 100 bonus points, you become a premium member at Grocies Supermarket by unlocking your gold membership</h2>
+                    <h3>To view your loyalty points, kindly download our app or check your email to view the latest purchase.</h3>
+                </div>
+        </div>
+      
+    </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <h2>Grocies Supermarket</h2>
+                    <p>Stay in touch with us</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <h2>Quick Links</h2>
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="OrderPage.html">Order Page</a></li>
+                        <li><a href="LoyaltyRegistration.html">Loyalty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h2>Contact Us</h2>
+                    <p><i class="fa-solid fa-envelope"></i> Email: GrociesSupermarket@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> Landline: +0112 123 456</p>
+                    <p><i class="fa-solid fa-map-marker-alt"></i> Address: No:8, Marine drive, Colombo</p>
+                    <p><i class="fa-solid fa-store"></i> Branches: Colombo, Bambalapitiya & Kollupitiya</p>
+                </div>
+                <div class="bottom-bar">
+                    <p>2024 &copy; Grocies Supermarket. All rights reserved!</p>
+                </div>
+            </div>
+        </footer>
+        
+        
+    
+</body>
+
+</html>

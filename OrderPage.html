@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Order Page </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="apple-touch-icon" sizes="180x180" href="PWA_Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="PWA_Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="PWA_Icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="cssStyles/OrderPage.css">
+    
+</head>
+<body>
+    <header class="head-color">
+        
+        
+        <div class="container-header">
+            
+                <div class="logo">
+                    <img class="grocies-img" src="Grocies_Supermarket_logo.png" alt="Grocies Supermarket Logo">
+                </div>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search your Product name/brand">
+                </div>
+                
+                <div class="buttons-header desktop-buttons">
+                    <button class="delivery-btn" onclick="window.location.href='OrderPage.html'">
+                        <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                    </button>
+                    <button class="store-btn" onclick="window.location.href='AboutUs.html'">
+                        <i class="fa-solid fa-location-dot"></i> Store Location
+                    </button>
+                    <button class="signup-btn" onclick="window.location.href='signup-login.html'">
+                        <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                    </button>
+                </div>
+                
+                <div class="buttons-header mobile-buttons">
+                    <button class="delivery-btn-mobile" onclick="window.location.href='OrderPage.html'">
+                        <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                    </button>
+                    <button class="store-btn-mobile" onclick="window.location.href='AboutUs.html'">
+                        <i class="fa-solid fa-location-dot"></i> Store Location
+                    </button>
+                    <button class="signup-btn-mobile" onclick="window.location.href='signup-login.html'">
+                        <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                    </button>
+                </div>
+            </div>
+    
+       
+
+    
+    
+        <nav class="nav-bar"> 
+
+                <ul> 
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbutton"> Products
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Vegetables.html"> Vegetables </a>
+                                <a href="DiaryProducts.html"> Diary Products</a>
+                                <a href="CosmeticsandSkinCare.html"> Cosmetic and Skin Care </a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li> <a href="home.html"> Home  </a> </li>
+
+                    <li> <a href="OrderPage.html"> Order Page  </a> </li>
+                    <li> <a href="LoyaltyRegistration.html"> Loyalty Registration </a> </li>
+                    <li> <a href="AboutUs.html"> About us </a> </li>
+                    <li> <a href="cartPage.html"> Cart <i class="fa-solid fa-cart-shopping"></i> </a> </li> 
+                </ul>
+
+              
+
+        </nav>
+    
+   
+
+</header>
+    <main>
+        <div class="order-form">
+            <form action="#" method="post">
+                <h1> Purchase Order Product Form </h1>
+                <h4> In order to purchase a product from us and receive the product at your doorstep, you must fill the form. </h4>
+                <fieldset>
+                    <legend> Customer's Billing Info </legend>
+                    <label for="Title"> Title: </label>
+                    <select name="Title" id="Title">
+                        <option value="" disabled selected>Title</option>
+                        <option value="Mr"> Mr </option>
+                        <option value="Mrs"> Mrs </option>
+                        <option value="Miss"> Miss </option>
+                    </select>
+                    <br>
+                    <label for="textbox01"> Customer's Name: </label>
+                    <input type="text" id="textbox01" name="CustomerFiName" maxlength="12" placeholder="Enter your First name">
+                    <br>
+                    <label for="textbox02"> Second Name: </label>
+                    <input type="text" id="textbox02" name="CustomerSecName" maxlength="15" placeholder="Enter your Second Name">
+                    <br>
+                    <label for="textbox03"> NIC No: </label>
+                    <input type="text" id="textbox03" name="NIC" maxlength="12" placeholder="XXXXXXXXXXXV">
+                    <br>
+                    <label for="address1"> Your Billing Address: </label>
+                    <input type="text" id="address1" name="address" maxlength="40">
+                    <br>
+                    <label for="phone"> Enter a phone number: </label>
+                    <input type="tel" id="phone" name="phone" placeholder="07*-****-***" pattern="[0-7]{3}-[0-9]{4}-[0-9]{3}">
+                    <input type="button" onclick="alert('Your Phone No has been verified')" value="Verify your Phone Number">
+                    <br>
+                    <label for="textbox04"> Loyalty No: </label>
+                    <input type="text" id="textbox04" name="LoyaltyNo" maxlength="6" placeholder="XXXXXX">
+                    <br>
+                    <label for="email01"> Email: </label>
+                    <input type="email" id="email01" name="email" placeholder="Enter your email address">
+                    <input type="button" onclick="alert('Kindly check your email address to confirm it.')" value="Submit Email Address">
+                </fieldset>
+        
+                <div class="order-summary">
+                    <p> Order No: </p>
+                    <p> Quantity - </p>
+                    <br>
+                </div>
+                <div class="order-total"> 
+                    <h3> Order Total</h3>
+                    <p> Subtotal: </p>
+                    <p> Delivery Fee: <i class="fa-solid fa-circle-info"></i> Rs 400 (Delivery charges may change depending on date/time) </p>
+                    <p> Taxes & Other Fees: <i class="fa-solid fa-circle-info"></i> Rs 100 </p>
+                    <h2> Total: </h2>
+                </div>
+                <div class="payment-methods">
+                    <h3>Select a Payment Method to proceed with your order</h3>
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="payment" value="credit_card"> Credit Card
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="payment" value="paypal"> PayPal
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="payment" value="bank_transfer"> Bank Transfer
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="payment" value="cash_on_delivery"> Cash on Delivery
+                        </label>
+                    </fieldset>
+                </div>
+        
+                <input class="submit-order" type="button" onclick="alert('Your order has been submitted')" value="Submit your order & pay">
+            </form>
+        </div>
+    
+    </main>
+    
+        
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <h2>Grocies Supermarket</h2>
+                    <p>Stay in touch with us</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <h2>Quick Links</h2>
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="OrderPage.html">Order Page</a></li>
+                        <li><a href="LoyaltyRegistration.html">Loyalty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h2>Contact Us</h2>
+                    <p><i class="fa-solid fa-envelope"></i> Email: GrociesSupermarket@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> Landline: +0112 123 456</p>
+                    <p><i class="fa-solid fa-map-marker-alt"></i> Address: No:8, Marine drive, Colombo</p>
+                    <p><i class="fa-solid fa-store"></i> Branches: Colombo, Bambalapitiya & Kollupitiya</p>
+                </div>
+                <div class="bottom-bar">
+                    <p>2024 &copy; Grocies Supermarket. All rights reserved!</p>
+                </div>
+            </div>
+        </footer>
+    
+    
+    
+    
+</body>
+</html>

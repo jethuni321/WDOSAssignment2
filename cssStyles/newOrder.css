@@ -1,0 +1,341 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+.order-form {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1, h4 {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.2em;
+    color: #27ae60;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.form-group input, .form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="button"] {
+    margin-top: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #219150;
+}
+
+.cart-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.cart-table th {
+    background-color: #000;
+    color: #fff;
+}
+
+.cart-img {
+    max-width: 80px;
+    border-radius: 8px;
+}
+
+.cart-product-title, .cart-price-unit {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.cart-quantity {
+    width: 60px;
+    text-align: center;
+}
+
+
+.order-total {
+    
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    background-color: gold;
+    color: black;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.order-total .info-icon i{
+    margin-left: 5px;
+    color: #fff;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 20px;
+    
+}
+
+.delivery-fee{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 20px;
+    
+}
+
+.taxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 20px;
+    
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border-top: 3px solid white;
+    margin-top: 5px;
+    
+}
+
+
+
+
+.pay-now-btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto;
+}
+
+.btn-buy:hover, .pay-now:hover {
+    background-color: #e67e22;
+}
+
+.payment-methods {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.payment-methods h3 {
+    color: #27ae60;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-methods form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.payment-methods label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+
+.footer-container {
+    position: relative;
+    top: 180px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    flex: 1 1 30%;
+    margin-bottom: 20px;
+    color: white;
+    padding: 0 15px;
+    font-size: large;
+}
+
+.footer-content h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid gold;
+    padding-bottom: 10px;
+}
+
+.footer-content p, .footer-content a {
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+
+.footer-content p i {
+    margin-right: 10px;
+}
+
+.footer-content a {
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: white;
+    transition: 0.4s;
+    border-bottom: 1px solid green;
+}
+
+.list {
+    padding: 0;
+    text-align: center;
+}
+
+.list li {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.list a {
+    color: gold;
+}
+
+.social-icons {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 30px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .fa-instagram {
+    background: linear-gradient(45deg, #405de6, #833ab4, #e1306c, #fd1d1d, #f77737, #ffdc80);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.social-icons .fa-facebook {
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.social-icons .fa-twitter {
+    background-color: skyblue;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.social-icons .fa-youtube {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    border-bottom: none;
+}
+
+.bottom-bar {
+    text-align: center;
+    background-color: gold;
+    padding: 10px 0;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}

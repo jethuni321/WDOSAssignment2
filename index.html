@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grocies Supermarket </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="apple-touch-icon" sizes="180x180" href="PWA_Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="PWA_Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="PWA_Icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="cssStyles/home.css">
+    
+</head>
+<body>
+    <header class="head-color">
+        
+        
+                <div class="container-header">
+                    
+                        <div class="logo">
+                            <img class="grocies-img" src="Grocies_Supermarket_logo.png" alt="Grocies Supermarket Logo">
+                        </div>
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" placeholder="Search your Product name/brand">
+                        </div>
+                        
+                        <div class="buttons-header desktop-buttons">
+                            <button class="delivery-btn" onclick="window.location.href='OrderPage.html'">
+                                <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                            </button>
+                            <button class="store-btn" onclick="window.location.href='AboutUs.html'">
+                                <i class="fa-solid fa-location-dot"></i> Store Location
+                            </button>
+                            <button class="signup-btn" onclick="window.location.href='signup-login.html'">
+                                <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                            </button>
+                        </div>
+                        
+                        <div class="buttons-header mobile-buttons">
+                            <button class="delivery-btn-mobile" onclick="window.location.href='OrderPage.html'">
+                                <i class="fa-solid fa-truck"></i> Delivery/Shipping
+                            </button>
+                            <button class="store-btn-mobile" onclick="window.location.href='AboutUs.html'">
+                                <i class="fa-solid fa-location-dot"></i> Store Location
+                            </button>
+                            <button class="signup-btn-mobile" onclick="window.location.href='signup-login.html'">
+                                <i class="fa-solid fa-circle-user"></i> Sign-Up/Log-In
+                            </button>
+                        </div>
+              </div>
+            
+               
+
+            
+            
+                <nav class="nav-bar"> 
+
+                        <ul> 
+                            <li>
+                                <div class="dropdown">
+                                    <button class="dropbutton"> Products
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="Vegetables.html"> Vegetables </a>
+                                        <a href="DiaryProducts.html"> Diary Products</a>
+                                        <a href="CosmeticsandSkinCare.html"> Cosmetic and Skin Care </a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li> <a href="index.html"> Home  </a> </li>
+
+                            <li> <a href="OrderPage.html"> Order Page  </a> </li>
+                            <li> <a href="LoyaltyRegistration.html"> Loyalty Registration </a> </li>
+                            <li> <a href="AboutUs.html"> About us </a> </li>
+                            <li> <a href="cartPage.html"> Cart <i class="fa-solid fa-cart-shopping"></i> </a> </li> 
+                        </ul>
+
+                      
+
+                </nav>
+            
+         
+    
+</header>
+<main>
+
+     <h1> WE WARMLY WELCOME YOU TO GROCIES SUPERMARKET! </h1>
+    
+
+        <div id="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                        <div class="slide slide_1">
+                            <div class="slide-content">  
+                                <img  class="main_img" src="Images/familyShopping.jpg" alt="slide main image for grocies supermarket">
+                                <h2 class="main-txt"> Your happiness is our treasure for lifetime! </h2>
+                                <button class="order-btn" onclick="location.href='orderPage.html'">   Place an order Now!  </button>  
+                             </div>
+                        </div>
+                            <div class="slide slide_2">
+                                <div class="slide-content">
+                                    <img class="slide2img" src="Images/Workstaff.jpg" alt="Grocies staff is working happily!">
+                                </div>
+                            </div>
+                            <div class="slide slide_3">
+                                <div class="slide-content">
+                                    <img class="slide3img" src="Images/organic_veg_slide2.webp" alt="Organic vegetables fresh from sri lanka">
+                                </div>
+                            </div>
+                            <div class="slide slide_4">
+                                <div class="slide-content">
+                                        <img class="slide4img" src="Images/cosmetics_slide3.webp" alt="Avaiable cosmetic products">
+                                </div>
+                            </div>
+                   </div>
+              </div>
+         </div>
+         <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+         </div>
+         <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+         </div>
+    </div>
+
+    <div class="nav-section-bar"> 
+        <nav>
+           <ul>
+               <li> <a href="#intro"> Introduction |  </a> </li>
+               <li> <a href="#services"> Services | </a> </li>
+               <li> <a href="#promo"> Promotions and discounts | </a> </li>
+               <li> <a href="#sponsers"> Our Sponsers</a> </li>
+           </ul>
+       </nav>
+  </div>
+       
+       <section id="intro">
+            <h2> A brief intro about us..</h2>
+            <p> Dear Valued Customer,
+                <br>
+                
+                Welcome to Grocies Supermarket, your premier destination for all your grocery needs! As a well-recognized supermarket in Sri Lanka, we take pride in our reputation as a top-ranking establishment globally. With our own line of exported products, we bring a taste of Sri Lanka to the world.</p>
+            <br>
+            <p> At Grocies, we are specialized in providing organic products and fresh vegetables, ensuring that you have access to the highest quality ingredients for your culinary adventures. Our commitment to sustainability and quality shines through in every item we offer. </p>
+            <br>
+            <a href="Vegetables.html"> To know more about where our vegetables come from click here. </a>
+            <br>
+            <p> But what truly sets us apart is our dedicated staff, renowned for their prestigious customer care. They go above and beyond to assist you, ensuring that your shopping experience is not just convenient, but truly enjoyable. </p>
+            <br>
+            <a href="AboutUs.html"> Get to know us!</a>   
+            <p> So come and experience the Grocies difference. Enjoy your moments in buying what you love at your own pace, surrounded by your family and friends. We're here to make your shopping experience unforgettable. </p>
+            
+    </section>
+
+    <section id="services">
+           <h2> Services We offer!</h2>
+            <div class="services-section">
+
+                <img class="img-services" src="Images/Delivery.jpeg" alt="grocies staff is happily organising the supermarket.">
+                <div class="services-details">
+                    <ol type="1"> 
+                        <li> Delivery - We entrust you that we will give you the products safe and sound to your door-step. </li> 
+                        <li> Payment methods - You have two options where you can either pay credit/debit cards or on cash delivery. </li>
+                        <li> Supermarket open hours - We are open 24/7 online services and Our supermarket is opne from 8am to 8pm.</li>
+                        <li> Parking Area - You can easily park your vehicle at our supermarket and it is safe from weather too.</li>
+                        <li> Customer service - Our customer service is avaliable 24/7 whenever you need. </li>
+                    
+                        <li> <a href="AboutUs.html"> To know more about our services click here to view the table. </a> </li>
+                    </ol>
+                </div>
+            </div>
+        
+    </section>
+
+    <section id="promo">
+
+            <h2>Promotions and discounts</h2>
+            <div class="promo-section">
+                
+                <div class="promo-details">
+                    <p>Are you a person who enjoys some quality discounts when you purchase in bulk? We have the answer to that.</p>
+                    <p>At Grocies, we provide monthly promotions on products. For example, our current ongoing promotions include:</p>
+                    <br><br>
+                    <h3> To unlock more discounts/promotions exclusively avaialble for Loyalty members. </h3>
+                    <br>
+                    <a href="LoyaltyRegistration.html"> Not registered yet? Register Now - Click here!!! </a>
+                    <br><br>
+                    <ul>
+                        <li>5% off when you buy more than LKR 5000/- of products.</li>
+                        <li>10% off for more than LKR 10000/- of products.</li>
+                        <li>30% off for more than LKR 30000/- of products.</li>
+                        <li>Free delivery for products that are worth LKR 5000/-.</li>
+                        <li>Free gift items for more than LKR 30000/- of products.</li>
+                    </ul>
+                </div>
+                <img class="img-promo" src="Images/discount_veg_slide2.webp" alt="A bag full of your favourites at a great discount" width="900" height="500">
+        
+                
+            </div>
+    </section>
+    
+    <section id="sponsers">
+            <h2> Sponsers </h2>
+            <div class="sponsers-section">
+                <img class="img-sponsers" src="Images/sponsers.jpg" alt="main sponsers at grocies">
+                <div class="sponsers-details">
+                    <ul>
+                        <li> Our sponsors include well-known brands in the food industry, both locally and internationally.</li>
+                        <li>We feature a wide range of high-quality products, including fresh produce, pantry staples, and specialty items.</li>
+                        <li>Our main sponsors - Uniliver, Kotmale, Elephant house and more - ensure that we offer the best products to our customers.</li>
+                        <li>Explore our aisles to find your favorite brands and discover new flavors from around the world.</li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h2>Grocies Supermarket</h2>
+            <p>Stay in touch with us</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <h2>Quick Links</h2>
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="OrderPage.html">Order Page</a></li>
+                <li><a href="LoyaltyRegistration.html">Loyalty</a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h2>Contact Us</h2>
+            <p><i class="fa-solid fa-envelope"></i> Email: GrociesSupermarket@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> Landline: +0112 123 456</p>
+            <p><i class="fa-solid fa-map-marker-alt"></i> Address: No:8, Marine drive, Colombo</p>
+            <p><i class="fa-solid fa-store"></i> Branches: Colombo, Bambalapitiya & Kollupitiya</p>
+        </div>
+        <div class="bottom-bar">
+            <p>2024 &copy; Grocies Supermarket. All rights reserved!</p>
+        </div>
+    </div>
+</footer>
+
+
+ </body> 
+</html>
