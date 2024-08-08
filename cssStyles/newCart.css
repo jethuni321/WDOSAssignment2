@@ -347,7 +347,7 @@ header .shopping span{
 }
 
 .cart-table th {
-    background-color: #4CAF50;
+    background-color: #165F35;
     color: white;
     
     font-family:'Times New Roman', Times, serif;
@@ -531,7 +531,7 @@ tbody #cart-items{
 .product-head-title {
     font-size:40px;
     text-align: center;
-    color: #27ae60;
+    color: #1C7D44;
     text-shadow: 2px 2px #000000;
 }
 
@@ -565,14 +565,14 @@ tbody #cart-items{
 
 .product-title {
     font-size: 1.2em;
-    color: #27ae60;
+    color: #1D8147;
     margin: 10px 0;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .price-per-unit {
     font-size: 1em;
-    color: #f39c12;
+    color: #774B0D;
 }
 
 .quantity-input {
@@ -583,7 +583,7 @@ tbody #cart-items{
 
 .quantity-input label {
     font-size: 0.9em;
-    color: #7f8c8d;
+    color: #515A5C;
     margin-right: 10px; 
 }
 
