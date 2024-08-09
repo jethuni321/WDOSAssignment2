@@ -172,7 +172,7 @@ function refreshPgCart() {
     }
 
     function redirectToOrderPage() {
-        window.location.href = "order.html";
+        window.location.href = "https://jethuni321.github.io/WDOSAssignment2/order.html";
     }
 }
 
