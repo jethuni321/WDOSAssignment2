@@ -174,14 +174,26 @@
                             <input type="button" onclick="alert('Your Phone No has been verified')" value="Verify your Phone Number">
                             
                             <br><br>
-                            <label for="password01"> Password: </label>
-                            <input type="password" id="password01" placeholder="Enter your password"  maxlength="12" required>
-                            <h5> You can include include special characters @/!/#/& for strong passwords </h5>
-                            <h5> Your Password must be between 4 to 8 characters</h5>
-            
-                            <label for="password01"> Confirm Password: </label>
-                            <input type="password" id="password02" placeholder="Enter the same password again"  maxlength="12" required>
-            
+                            <!-- Password Label and Input -->
+                          <label for="password01">
+                            Password:
+                          </label>
+                          <input type="password" id="password01" placeholder="Enter your password" maxlength="12" required>
+                        
+                          <!-- Instructions -->
+                          <h5>
+                            You can include special characters @/!/#/&amp; for strong passwords.
+                          </h5>
+                          <h5>
+                            Your Password must be between 4 to 12 characters.
+                          </h5>
+                        
+                          <!-- Confirm Password Label and Input -->
+                          <label for="password02">
+                            Confirm Password:
+                          </label>
+                          <input type="password" id="password02" placeholder="Enter the same password again" maxlength="12" required>
+
                             <input type="button" onclick="alert('Your password has been confirmed')" value="Submit Password">
                             <input type="reset" value="Reset your password">
                             <br><br>
